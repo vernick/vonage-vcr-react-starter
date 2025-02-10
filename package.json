@@ -1,0 +1,29 @@
+{
+  "name": "vcr-react-express-app",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "engines": {
+    "node": ">=22.x",
+    "npm": "9.x"
+  },
+  "scripts": {
+    "build": "yarn workspace client build",
+    "dev": "yarn && yarn workspace client dev & yarn workspace server dev",
+    "run-server": "yarn workspace server start",
+    "start": "yarn workspace client build && yarn workspace server start",
+    "start:backend": "yarn workspace server dev",
+    "start:frontend": "yarn workspace client dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.6",
+    "tailwindcss": "^4.0.6"
+  }
+}

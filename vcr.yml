@@ -1,0 +1,21 @@
+project:
+    name: vcr-react-express-app
+instance:
+    name: dev
+    runtime: nodejs22
+    region: aws.use1
+    application-id: 183dcd42-8703-4782-9ec3-c03ed36f222c
+    build-script: './build.sh'    
+    entrypoint: [yarn, run-server]
+    environment:
+    - name: VIDEO_SERVICE_PROVIDER
+      secret: VIDEO_SERVICE_PROVIDER
+    - name: VONAGE_APP_ID
+      secret: VONAGE_APP_ID
+    - name: VONAGE_PRIVATE_KEY
+      secret: VONAGE_PRIVATE_KEY    
+    
+debug:
+    application-id: 183dcd42-8703-4782-9ec3-c03ed36f222c
+    entrypoint: [yarn, run-server]
+        
