@@ -4,4 +4,7 @@ dist/
 .yarn
 .DS_Store
 server/.env
+debug_env.sh
+set_secrets.sh
+package-lock.json
 
