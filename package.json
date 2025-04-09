@@ -12,7 +12,7 @@
     "npm": "9.x"
   },
   "scripts": {
-    "build" : "yarn workspace client build",
+    "build": "yarn workspace client build",
     "dev": "concurrently \"yarn workspace server dev\" \"yarn workspace client watch:build\"",
     "watch:client": "chokidar 'client/src/**/*' -c 'yarn run build:client'",
     "run-server": "yarn workspace server start",
@@ -21,11 +21,12 @@
     "start:frontend": "yarn workspace client dev"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2",
-    "chokidar-cli": "^3.0.0"
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.1.2"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
+    "dotenv": "^16.4.7",
     "tailwindcss": "^4.0.6"
   }
 }
