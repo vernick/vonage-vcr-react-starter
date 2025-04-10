@@ -8,7 +8,6 @@ const fs = require("fs");
 
 const app = express();
 const port = process.env.VCR_PORT ?? 3345;
-console.log('APP_TEST_URL_ENV', process.env.APP_TEST_URL_ENV ?? 'Not Set');
 
 // Enable CORS if needed
 app.use(cors());
@@ -22,11 +21,12 @@ app.use(
   })
 );
 
-// Helper to extract APP_ env vars
+// Helper to extract REACT_ env vars from both the vcr.yml and .env files
+//
 function getAppEnvVars() {
   const envVars = {};
   for (const [key, value] of Object.entries(process.env)) {
-    if (key.startsWith("APP_")) {
+    if (key.startsWith("REACT_")) {
       envVars[key] = value;
     }
   }

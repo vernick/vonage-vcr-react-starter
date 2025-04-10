@@ -1,0 +1,24 @@
+# See documentation here: https://developer.vonage.com/en/vonage-cloud-runtime/guides/manifest?source=vonage-cloud-runtime
+project:
+    name: [*NAME OF APPLICATION*]
+instance:
+    name: dev
+    runtime: nodejs22
+    region: [*REGION*]
+    application-id: [*APPLICATION ID*]
+    build-script: './build.sh'    
+    entrypoint: [yarn, run-server]
+    environment:
+    - name: REACT_ENV_PROD_VALUE  # This is an env variable accessible by server and client
+      value: "THE_VALUE"
+     
+    
+debug:
+    application-id: 183dcd42-8703-4782-9ec3-c03ed36f222c
+    entrypoint: [yarn, run-server]
+    environment:
+    - name: REACT_ENV_DEBUG_VALUE
+      value: "THE_VALUE"    
+   
+
+        
