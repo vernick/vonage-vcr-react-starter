@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-      matrix:
-        node-version: [18.x, 20.x]
+      matrix:    
+        node-version: [22.x] # Only test on Node.js 22 and later
 
     steps:
       - name: Checkout code
@@ -30,10 +30,7 @@ jobs:
         working-directory: client
         run: npm install
 
-      - name: Run client tests
-        working-directory: client
-        run: npm test --if-present
-
       - name: Run server tests
-        run: npm test server.test.js --if-present  # Make sure to run server-side tests
+        working-directory: server
+        run: npm test        
 

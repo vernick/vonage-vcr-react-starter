@@ -59,7 +59,13 @@ app.get("*", (req, res) => {
   });
 });
 
+// Export app for testing
+module.exports = app;
+
 // Start the server
-app.listen(port, () => {
-  console.log(`V1.0 Server is running on PORT ${port}`);
-});
+// Only start the server if this file is run directly
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`V1.0 Server is running on PORT ${port}`);
+  });
+}
