@@ -18,11 +18,17 @@
     "run-server": "yarn workspace server start",
     "start": "yarn workspace client build && yarn workspace server start",
     "start:backend": "yarn workspace server dev",
-    "start:frontend": "yarn workspace client dev"
+    "start:frontend": "yarn workspace client dev",
+    "test": "jest",   // If you don't already have it
+    "test-server": "jest server.test.js"  // For server-side testing
+}
+
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "jest": "^27.5.1",
+    "supertest": "^7.1.0"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
