@@ -19,10 +19,8 @@
     "start": "yarn workspace client build && yarn workspace server start",
     "start:backend": "yarn workspace server dev",
     "start:frontend": "yarn workspace client dev",
-    "test": "jest",   // If you don't already have it
-    "test-server": "jest server.test.js"  // For server-side testing
-}
-
+    "test": "jest",   
+    "test-server": "jest server.test.js" 
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
